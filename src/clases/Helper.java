@@ -70,7 +70,7 @@ public class Helper {
         for (int i = 0; i < nf; i++) {
             for (int j = 0; j < nc; j++) {
                 aux = (int) tabla1.getValueAt(i, j);
-                if ((j == 0) || (i == 0 && j != nc - 1) || (i == nf / 2 && j != nc - 1) || (i == nf - 1 && j != nc - 1) || (j == nc - 1 && i != 0 && i != nf / 2 && i != nf - 1)) {
+                if (j == 0 || (i == 0 && j != nc - 1) || (i == nf / 2 && j != nc - 1) || (i == nf - 1 && j != nc - 1) || (j == nc - 1 && i != 0 && i != nf / 2 && i != nf - 1)) {
                     tabla2.setValueAt(aux, i, j);
                 }
             }
@@ -87,7 +87,7 @@ public class Helper {
         for (int i = 0; i < nf; i++) {
             for (int j = 0; j < nc; j++) {
                 aux = (int) tabla1.getValueAt(i, j);
-                if ((j == 0 || i == 0 || j == nc - 1) || (i == j && i + j <= nf) || (i + j == nf - 1 && i <= j)) {
+                if (j == 0 || j == nc - 1 || (i == j && i + j <= nf) || (i + j == nf - 1 && i <= j)) {
                     tabla2.setValueAt(aux, i, j);
                 }
 
@@ -104,23 +104,7 @@ public class Helper {
         for (int i = 0; i < nf; i++) {
             for (int j = 0; j < nc; j++) {
                 aux = (int) tabla1.getValueAt(i, j);
-                if ((j == 0 || j == nc - 1) || (nf / 2 > j && i == nc - 1) || (nf / 2 < j && i == nc - 1) || (j == nc / 2 && i >= nf / 2 && i != nc - 1)) {
-                    tabla2.setValueAt(aux, i, j);
-                }
-            }
-        }
-    }
-
-    public static void letraQ(JTable tabla1, JTable tabla2) {
-        int nf, nc, aux, s = 0;
-        
-        nf = tabla1.getRowCount();
-        nc = tabla1.getColumnCount();
-        
-        for (int i = 0; i < nf; i++) {
-            for (int j = 0; j < nc; j++) {
-                aux = (int) tabla1.getValueAt(i, j);
-                if ( (i == 0 && j != 0 && j != nf - 1) || (j == 0 && i <= nf / 2 && i != 0) || (((s + 1) == i && j != 0 && j != nf - 1)) || (j == nc - 1 && i <= nf / 2 && i != 0) || (i == j && i > s)) {
+                if (j == 0 || j == nc - 1 || (j < nf / 2  && i == nc - 1) || (j > nf / 2  && i == nc - 1) || (j == nc / 2 && i >= nf / 2 && i != nc - 1)) {
                     tabla2.setValueAt(aux, i, j);
                 }
             }
@@ -153,7 +137,7 @@ public class Helper {
         for (int i = 0; i < nf; i++) {
             for (int j = 0; j < nc; j++) {
                 aux = (int) tabla1.getValueAt(i, j);
-                if ((i == 0 || j == 0 || i == (nf / 2) || (j == nc - 1 && i == 1) || i == nf - 1) || (j == nc - 1 && i >= nf / 2)) {
+                if (j == 0 || i == 0 || i == nf / 2 || j == nc - 1 && i == 1 || i == nf - 1 || j == nc - 1 && i >= nf / 2) {
                     tabla2.setValueAt(aux, i, j);
                 }
 
@@ -171,7 +155,7 @@ public class Helper {
         for (int i = 0; i < nf; i++) {
             for (int j = 0; j < nc; j++) {
                 aux = (int) tabla1.getValueAt(i, j);
-                if ((j == 0 || i == 0 || i == nf / 2) || (j == nc - 1 && j / i >= 2 || (i == j && i + j >= nf))) {
+                if (j == 0 || i == 0 || i == nf / 2 || j == nc - 1 && j / i >= 2 || i == j && i + j >= nf) {
 
                     tabla2.setValueAt(aux, i, j);
                 }

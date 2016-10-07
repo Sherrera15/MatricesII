@@ -190,7 +190,7 @@ public class Principal extends javax.swing.JFrame {
 
         cmbOperaciones.setBackground(new java.awt.Color(204, 204, 255));
         cmbOperaciones.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        cmbOperaciones.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Letra B.", "Letra M.", "Letra W.", "Letra Q.", "Letra J.", "Letra G.", "Letra R.", "FiguraI.", "FiguraII.", "FiguraIII." }));
+        cmbOperaciones.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Letra B.", "Letra M.", "Letra W.", "Letra J.", "Letra G.", "Letra R.", "FiguraI.", "FiguraII.", "FiguraIII." }));
         jPanel1.add(cmbOperaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, 180, 30));
 
         tblTablaInicial.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -320,6 +320,7 @@ public class Principal extends javax.swing.JFrame {
         Helper.limpiadoTabla(tblTablaResultado);
 
         switch (op) {
+            
             case 0:
                 Helper.letraB(tblTablaInicial, tblTablaResultado);
                 break;
@@ -327,28 +328,32 @@ public class Principal extends javax.swing.JFrame {
             case 1:
                 Helper.letraM(tblTablaInicial, tblTablaResultado);
                 break;
+                
             case 2:
                 Helper.letraW(tblTablaInicial, tblTablaResultado);
                 break;
+            
             case 3:
-                Helper.letraQ(tblTablaInicial, tblTablaResultado);
-                break;
-            case 4:
                 Helper.letraJ(tblTablaInicial, tblTablaResultado);
                 break;
-            case 5:
+                
+            case 4:
                 Helper.letraG(tblTablaInicial, tblTablaResultado);
                 break;
-            case 6:
+                
+            case 5:
                 Helper.letraR(tblTablaInicial, tblTablaResultado);
                 break;
-            case 7:
+                
+            case 6:
                 Helper.figuraI(tblTablaInicial, tblTablaResultado);
                 break;
-            case 8:
+                
+            case 7:
                 Helper.figuraII(tblTablaInicial, tblTablaResultado);
                 break;
-            case 9:
+                
+            case 8:
                 Helper.figuraIII(tblTablaInicial, tblTablaResultado);
                 break;
         }
