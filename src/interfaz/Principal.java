@@ -394,14 +394,16 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_cmdLimpiarActionPerformed
 
     private void txtNumeroDeFilasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroDeFilasKeyTyped
+       
         char c = evt.getKeyChar();
-        if (!Character.isDigit(c)) {
+       if (!Character.isDigit(c)) {
             getToolkit().beep();
             evt.consume();
         }
     }//GEN-LAST:event_txtNumeroDeFilasKeyTyped
 
     private void txtNumeroDeColumnasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroDeColumnasKeyTyped
+        
         char c = evt.getKeyChar();
         if (!Character.isDigit(c)) {
             getToolkit().beep();
@@ -410,6 +412,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNumeroDeColumnasKeyTyped
 
     private void cmdLlenadoManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLlenadoManualActionPerformed
+       
         int nf, nc, n, sw, res;;
 
         nc = tblTablaInicial.getColumnCount();
